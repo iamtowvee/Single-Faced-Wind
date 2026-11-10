@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://ceirls6b01jx6"]
+
+[ext_resource type="Script" uid="uid://bhm8gddxbqyte" path="res://src/sessions/new_start.gd" id="1_44eqm"]
+[ext_resource type="Texture2D" uid="uid://b4t1evmfypfsw" path="res://assets/background.png" id="1_fu2vt"]
+[ext_resource type="Script" uid="uid://bs4iwt253kmjj" path="res://src/sessions/back.gd" id="3_44eqm"]
+[ext_resource type="Texture2D" uid="uid://blkhrdtg42gjm" path="res://assets/button.png" id="3_lb8q6"]
+[ext_resource type="Texture2D" uid="uid://crcu86rs7esar" path="res://assets/button.active.png" id="4_jy1c6"]
+[ext_resource type="Texture2D" uid="uid://b1n14inr3huvb" path="res://assets/button.disable.png" id="5_y36hv"]
+[ext_resource type="Script" uid="uid://dwcdsglxf3a02" path="res://src/sessions/done.gd" id="7_lb8q6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kq1y5"]
+texture = ExtResource("3_lb8q6")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yle24"]
+texture = ExtResource("4_jy1c6")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhs3r"]
+texture = ExtResource("4_jy1c6")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ca5uc"]
+texture = ExtResource("5_y36hv")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2b06r"]
+texture = ExtResource("4_jy1c6")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[node name="Control" type="Control" unique_id=1462051782]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_44eqm")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1566548266]
+anchor_mode = 0
+zoom = Vector2(0.6, 0.6)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1859605519]
+scale = Vector2(1.6666666, 1.6666664)
+texture = ExtResource("1_fu2vt")
+centered = false
+
+[node name="TitleSFW" type="Label" parent="." unique_id=1367570575 groups=["content"]]
+z_index = 2
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 1579.0
+offset_bottom = 257.0
+tooltip_text = "Settings"
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "< New session"
+uppercase = true
+
+[node name="Button" type="Button" parent="." unique_id=1924454433 groups=["content"]]
+z_index = 3
+layout_mode = 0
+offset_left = 96.0
+offset_top = 128.0
+offset_right = 224.0
+offset_bottom = 256.0
+mouse_default_cursor_shape = 2
+flat = true
+script = ExtResource("3_44eqm")
+
+[node name="Done" type="Button" parent="." unique_id=137420168 groups=["content"]]
+z_index = 2
+layout_mode = 0
+offset_left = 1152.0
+offset_top = 1544.0
+offset_right = 1920.0
+offset_bottom = 1672.0
+tooltip_text = "New"
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_kq1y5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yle24")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yhs3r")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ca5uc")
+theme_override_styles/focus = SubResource("StyleBoxTexture_2b06r")
+text = "Done"
+script = ExtResource("7_lb8q6")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=828130882 groups=["content"]]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 384.0
+offset_right = 3072.0
+offset_bottom = 1472.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1885008384]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/VBoxContainer" unique_id=561171726]
+layout_mode = 2
+size_flags_vertical = 4

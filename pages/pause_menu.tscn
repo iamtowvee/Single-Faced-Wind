@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://c17cawiuosptu"]
+
+[ext_resource type="Script" uid="uid://s7ef0vkhkl37" path="res://src/CHTR_I/pause_menu.gd" id="1_rnux0"]
+[ext_resource type="Texture2D" uid="uid://q1ftc0pu2kg" path="res://assets/page.png" id="2_dvej4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v2dpu"]
+texture = ExtResource("2_dvej4")
+texture_margin_left = 200.0
+texture_margin_top = 100.0
+texture_margin_right = 200.0
+texture_margin_bottom = 100.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_1b6jw"]
+font_size = 36
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=317286285]
+layer = 10
+script = ExtResource("1_rnux0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1154321953]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=378915133]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="CenterContainer" unique_id=1994943528]
+custom_minimum_size = Vector2(768, 480)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_v2dpu")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=377159142]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=39839338]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=398411612]
+layout_mode = 2
+text = "Pause menu
+"
+label_settings = SubResource("LabelSettings_1b6jw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonResume" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1991392887]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Resume"
+
+[node name="ButtonSettings" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=221979238]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Settings"
+
+[node name="ButtonExit" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1855330191]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Exit"
+
+[node name="ButtonSave" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1149114176]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Save and Exit"

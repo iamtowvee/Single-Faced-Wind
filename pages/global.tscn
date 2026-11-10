@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cyq2ckprcofhd"]
+
+[ext_resource type="Texture2D" uid="uid://b4t1evmfypfsw" path="res://assets/background.png" id="1_su5rm"]
+
+[node name="Global" type="Control" unique_id=1546419429]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=651798433]
+anchor_mode = 0
+zoom = Vector2(0.6, 0.6)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=500050838]
+scale = Vector2(1.6666666, 1.6666664)
+texture = ExtResource("1_su5rm")
+centered = false

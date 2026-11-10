@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://dvplew1a1cwbl"]
+
+[ext_resource type="Texture2D" uid="uid://b4t1evmfypfsw" path="res://assets/background.png" id="1_qmqo4"]
+[ext_resource type="Texture2D" uid="uid://blkhrdtg42gjm" path="res://assets/button.png" id="2_ihmyj"]
+[ext_resource type="Texture2D" uid="uid://crcu86rs7esar" path="res://assets/button.active.png" id="3_bkrxv"]
+[ext_resource type="Texture2D" uid="uid://b1n14inr3huvb" path="res://assets/button.disable.png" id="4_hw23e"]
+[ext_resource type="Script" uid="uid://c50my2hw2sotr" path="res://src/menu/exit.gd" id="5_bkrxv"]
+[ext_resource type="Script" uid="uid://2qoe8khe4rw7" path="res://src/menu/settings.gd" id="6_hw23e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hmdyn"]
+texture = ExtResource("2_ihmyj")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b8joi"]
+texture = ExtResource("3_bkrxv")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13xiy"]
+texture = ExtResource("3_bkrxv")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aw2si"]
+texture = ExtResource("4_hw23e")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mflav"]
+texture = ExtResource("3_bkrxv")
+texture_margin_left = 20.0
+texture_margin_top = 10.0
+texture_margin_right = 20.0
+texture_margin_bottom = 10.0
+
+[node name="Control" type="Control" unique_id=1808954417]
+z_index = 1
+layout_mode = 3
+anchor_right = 1.667
+anchor_bottom = 1.667
+offset_right = -0.3840332
+offset_bottom = -0.21606445
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1131030407]
+anchor_mode = 0
+zoom = Vector2(0.6, 0.6)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1443231566]
+scale = Vector2(1.6666666, 1.6666664)
+texture = ExtResource("1_qmqo4")
+centered = false
+
+[node name="TitleSFW" type="Label" parent="." unique_id=352492771]
+z_index = 2
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 1579.0
+offset_bottom = 257.0
+tooltip_text = "Single-Faced Wind"
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+text = "Single-Faced Wind"
+uppercase = true
+
+[node name="CHAPTER" type="Label" parent="." unique_id=1283673036]
+z_index = 2
+layout_mode = 0
+offset_left = 128.0
+offset_top = 256.0
+offset_right = 560.0
+offset_bottom = 328.0
+tooltip_text = "CHAPTER I"
+mouse_filter = 1
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 72
+text = "Chapter I"
+uppercase = true
+
+[node name="Exit" type="Button" parent="." unique_id=261904774]
+z_index = 2
+layout_mode = 0
+offset_left = 128.0
+offset_top = 1544.0
+offset_right = 896.0
+offset_bottom = 1672.0
+tooltip_text = "Exit"
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(0.9996994, 0.12577829, 0.08747386, 1)
+theme_override_colors/font_focus_color = Color(1, 0.23529412, 0.32941177, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.23529412, 0.32941177, 1)
+theme_override_colors/font_hover_color = Color(1, 0.23529412, 0.32941177, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9998897, 0.3978232, 0.32938173, 1)
+theme_override_colors/icon_normal_color = Color(0.9996994, 0.12577829, 0.08747386, 1)
+theme_override_colors/icon_focus_color = Color(1, 0.23529412, 0.32941177, 1)
+theme_override_colors/icon_pressed_color = Color(1, 0.23529412, 0.32941177, 1)
+theme_override_colors/icon_hover_color = Color(1, 0.23529412, 0.32941177, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.9998897, 0.3978232, 0.32938173, 1)
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmdyn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b8joi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_13xiy")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_aw2si")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mflav")
+text = "Exit"
+expand_icon = true
+script = ExtResource("5_bkrxv")
+
+[node name="Settings" type="Button" parent="." unique_id=280588473]
+z_index = 2
+layout_mode = 0
+offset_left = 128.0
+offset_top = 1352.0
+offset_right = 896.0
+offset_bottom = 1480.0
+tooltip_text = "Settings"
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxTexture_hmdyn")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b8joi")
+theme_override_styles/hover = SubResource("StyleBoxTexture_13xiy")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_aw2si")
+theme_override_styles/focus = SubResource("StyleBoxTexture_mflav")
+text = "Settings"
+script = ExtResource("6_hw23e")
